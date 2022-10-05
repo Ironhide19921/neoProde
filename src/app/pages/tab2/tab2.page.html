@@ -96,9 +96,10 @@
           <ion-label>Goles local:</ion-label>
           <ion-input
             type="number"
-            [(ngModel)]="homeGoals"
+            (ngModel)="homeGoals"
             name="homeGoals"
             required
+            (change)="nullGoals(this, formulario)"
             [disabled]="formulario.submitted"
           ></ion-input>
         </ion-item>
